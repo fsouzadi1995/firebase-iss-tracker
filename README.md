@@ -1,1 +1,0 @@
-# firebase-iss-tracker

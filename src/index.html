@@ -28,23 +28,29 @@
       #root {
         height: 15%;
         position: relative;
-        background-image: url('./assets/iss-banner.jpeg');
-        background-size: cover;
-        filter: blur(5px);
-        opacity: 0.7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
       }
 
-      /* #root::before {
+      h1 {
+        padding: 0;
+        margin: 0;
+      }
+
+      #root::before {
         content: '';
-        background-color: rgba(0, 0, 0, 0.7);
-        opacity: 0.5;
+        width: 100%;
+        height: 100%;
+        background-image: url(./assets/iss-banner.jpeg);
+        background-size: auto;
         position: absolute;
         top: 0;
         left: 0;
-      } */
+        opacity: 0.2;
+      }
 
       .title {
-        position: absolute;
         padding: 1.5em;
         margin: 0;
       }
@@ -165,28 +171,27 @@
               anchor: new google.maps.Point(15, 30),
             };
 
-            new google.maps.Marker({
+            const marker = new google.maps.Marker({
               position: { lat: +latitude, lng: +longitude },
               title: new Date(timestamp * 1000).toString(),
               icon: svgMarker,
               map: map,
             });
-          });
-      }
 
-      function toggleBounce() {
-        if (marker.getAnimation() !== null) {
-          marker.setAnimation(null);
-        } else {
-          marker.setAnimation(google.maps.Animation.BOUNCE);
-        }
+            marker.addListener('click', () => {
+              map.setCenter(marker.getPosition());
+
+              setTimeout(() => alert(new Date(timestamp * 1000).toString()), 0);
+            });
+          });
       }
     </script>
   </head>
   <body>
-    <div id="root"></div>
-    <div class="title">
-      <h1>International Space Station Location Tracker 🚀</h1>
+    <div id="root">
+      <div class="title">
+        <h1>International Space Station Location Tracker 🚀</h1>
+      </div>
     </div>
 
     <div id="map"></div>

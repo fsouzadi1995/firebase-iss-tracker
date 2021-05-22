@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Map</title>
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.6.1/firebase-firestore.js"></script>
+    <script type="module" src="/main.js"></script>
+  </head>
+  <body>
+    <div id="root">
+      <div class="title">
+        <h1>International Space Station Location Tracker 🚀</h1>
+        <small>Timer: <span id="timer">30</span></small>
+      </div>
+    </div>
+
+    <div id="map"></div>
+
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD0MfIOHUxBgZkOWasksL5Q5rnaD6RZIZw&libraries=&v=weekly"
+      async
+    ></script>
+  </body>
+</html>

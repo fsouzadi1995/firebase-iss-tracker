@@ -1,0 +1,61 @@
+@import url('https://fonts.googleapis.com/css2?family=Mandali&display=swap');
+
+#map {
+  display: flex;
+  justify-self: flex-end;
+  height: 80%;
+}
+
+html,
+body {
+  justify-content: space-between;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: black;
+  font-family: 'Mandali', sans-serif;
+  color: whitesmoke;
+  text-align: center;
+  overflow: hidden;
+}
+
+#root {
+  height: 15%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  padding: 0;
+  margin: 0;
+}
+
+#root::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  background-image: url(./assets/iss-banner.jpeg);
+  background-size: auto;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.2;
+}
+
+.title {
+  padding: 1.5em;
+  margin: 0;
+  display: flex;
+}
+
+small {
+  display: flex;
+  place-items: center;
+  margin-left: 10rem;
+}
+
+small > span {
+  font-size: 1rem;
+}

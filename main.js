@@ -1,12 +1,12 @@
 import './style.css';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDZblqllY4QSUw7llvBQOMmjf3tyNjsCi4',
-  authDomain: 'fir-iss-tracker-bed.firebaseapp.com',
-  projectId: 'fir-iss-tracker-bed',
-  storageBucket: 'fir-iss-tracker-bed.appspot.com',
-  messagingSenderId: '172571226536',
-  appId: '1:172571226536:web:eecbc1f63c1acb95ea6d9d',
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGE_SENDER_ID,
+  appId: process.env.APP_ID,
 };
 
 const fbase = firebase.initializeApp(firebaseConfig);

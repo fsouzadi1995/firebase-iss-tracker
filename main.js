@@ -1,5 +1,7 @@
 import './style.css';
 
+// public for poc purposes :)
+
 const firebaseConfig = {
   apiKey: 'AIzaSyDZblqllY4QSUw7llvBQOMmjf3tyNjsCi4',
   authDomain: 'fir-iss-tracker-bed.firebaseapp.com',
